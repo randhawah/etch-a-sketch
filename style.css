@@ -1,0 +1,51 @@
+:root {
+    --size: 5;
+    --boxColor: white;
+  }
+
+  .test{
+    height : 1em;
+    width : 1em;
+    border: 1px solid #ddd;
+    background-color : var(--boxColor);
+    margin : 5px;
+  }
+
+  body{
+    margin: auto;
+    display: grid;
+    justify-content: center;
+  }
+
+  #controls{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+  }
+
+  #container {
+    display: grid;
+    width: 30vw;
+    height: 30vw;
+    grid-gap: 0em;
+    grid-template-rows: repeat(var(--size), 1fr);
+    grid-template-columns: repeat(var(--size), 1fr);
+    justify-content: center;
+    border: 1px solid black;
+  }
+  
+  .grid-item {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    background-color : var(--boxColor);
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #clear, #slider{
+    padding : 5px;
+    margin : 5px;
+  }
