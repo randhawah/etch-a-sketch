@@ -1,6 +1,7 @@
 :root {
     --size: 5;
-    --boxColor: white;
+    --boxColor: #FFFFFF;
+    --rainbow-btn-color : red;
   }
 
   .test{
@@ -12,26 +13,40 @@
   }
 
   body{
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #header{
+    background-color: beige;
+    grid-column: 1 / -1;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    margin-top: 0px;
   }
 
   #controls{
+    align-self: start;
+    justify-self: center;
     display: grid;
-    align-items: center;
     justify-content: center;
     border: 1px solid black;
+    width : 20vw;
+    height : 40vw;
   }
 
   #container {
+    align-self: start;
+    justify-self: start;
     display: grid;
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
     grid-gap: 0em;
     grid-template-rows: repeat(var(--size), 1fr);
     grid-template-columns: repeat(var(--size), 1fr);
-    justify-content: center;
     border: 1px solid black;
   }
   
@@ -45,7 +60,20 @@
     justify-items: center;
   }
 
-  #clear, #slider{
-    padding : 5px;
+  button,  #colorPicker{
+    width : 10em;
+    height : 3em;
+    border-radius: 5px;
     margin : 5px;
+  }
+
+ #slider, #sizeResult{
+    width : 10em;
+    height : 3em;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  #rainbow{
+    background-color: var(--rainbow-btn-color);
   }

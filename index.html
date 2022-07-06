@@ -13,10 +13,13 @@
     <div class="test"></div>
     <div class="test"></div>
     <div class="test"></div> 
-    -->
+-->
+    <h1 id="header">Etch-a-Sketch</h1>
     <div id="controls">
         <input type="range" id="slider" min="5" max="64" value="6">
         <div id="sizeResult">Grid Size!!</div>
+        <input type="color" id="colorPicker" oninput="getData(this.value)">
+        <button id="rainbow" onclick="rainbowToggle();">Rainbow OFF!</button>
         <button id="clear">Clear!</button>
     </div>
     <div id="container"></div>
